@@ -25,12 +25,12 @@ if sys.version[0] == "3":
 logpath = '/var/log/sickbeard_mp4_automator'
 if os.name == 'nt':
     logpath = os.path.dirname(sys.argv[0])
-elif not os.isdir(logpath):
+elif not os.path.isdir(logpath):
     try:
         os.makedir(logpath)
     except:
         logpath = os.path.dirname(sys.argv[0])
-elif not os.isdir(logpath):
+elif not os.path.isdir(logpath):
     try:
         os.makedir(logpath)
     except:
